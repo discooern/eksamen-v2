@@ -12,7 +12,6 @@
 body{
     background: #FFF7F3;
     margin: 0 auto;
-    width: 80%;
     overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -46,11 +45,14 @@ body{
     border: none;
     background-color: #FFECE5;
     height: 6ch;
-    width: 20ch;
+    width: 18ch;
     cursor: pointer;
 }
+.navButtonLink:hover > .navButton{
+    text-decoration: underline;
+}
 .navigationBar{
-    position: relative;
+    transform: translateY(40px); transition: transform 0.5s ease 0s; top: -40px; position: fixed;
     background-color: #FFF7F3;
     width: 100%;
     height: 65px;
@@ -67,6 +69,18 @@ body{
 }
 .hamburgerMenu{
     display: none;
+    width: 12ch;
+    height: 5ch;
+    background-color: #FE7D4E;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 50px;
+    margin: auto 0;
+    cursor: pointer;
+}
+.hamburgerMenu:hover{
+    text-decoration: underline;
 }
 
 /* Hero styling */
@@ -102,8 +116,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 550px;
+    padding: 40px;
     margin: auto;
+    margin-bottom: 50px;
 }
 .showMoreLink{
     text-decoration: none;
@@ -124,12 +139,13 @@ body{
 }
 .secondHandImgGroup{
     display: flex;
+    justify-content: space-between;
 }
 /* secondHand book styling */
 .secondHandBook{
     cursor: pointer;
     margin: 10px;
-    max-width: 220px;
+    max-width: 250px;
     min-width: 120px;
     max-height: 400px;
     box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
@@ -147,16 +163,13 @@ body{
     margin: 0;
 }
 .monthBookAside{
-    width: 35%;
+    width: 30%;
     display: flex;
     background-color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 600px;
-}
-.asideH1, .asideP{
-    width: 66%;
 }
 .asideH1, .asideLink{
     color: #543D32;
@@ -165,6 +178,8 @@ body{
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-weight: 700;
+    margin-top: 35px;
 }
 .asideLink:hover{
     text-decoration: underline;
@@ -172,8 +187,13 @@ body{
 .asideImg{
     width: 24px;
 }
+.asideH1{
+    font-size: 30px;
+    margin-bottom: 28px;
+}
 .asideP{
     color: #707070;
+    width: 200px;
 }
 
 /* Book of the month MAIN Styling */
@@ -181,12 +201,13 @@ body{
     color: #543D32;
 }
 .monthMainImg{
-    width: 272px;
-    height: 420px;
+    max-width: 272px;
+    margin-left: 13%;
 }
 .monthMainH1{
-    color: #754d3a;
+    color: #74432e;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 .monthMainH2{
     color: #543D32;
@@ -194,13 +215,16 @@ body{
 }
 .monthMainP{
     color: #949494;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -10px;
 }
 .monthBookMain{
     display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     align-items: center;
+    background-color: #fff2ee;
+    width: 70%;
 }
 .monthMainAlign{
     width: 320px;
@@ -213,21 +237,26 @@ body{
 .monthMainDesc{
     color: #707070;
     max-width: 400px;
+    margin-top: 20px;
 }
 .monthMainText, .monthMainLink{
     margin-left: 20px;
 }
 .monthMainText{
-    margin-bottom: 80px;
+    width: 500px;
+    margin-bottom: 25px;
+    margin-left: 10%;
 }
 .monthMainBtn{
     background-color: #FE7D4E;
     color: white;
     font-weight: 600;
     height: 45px;
-    width: 140px;
+    width: 160px;
     border: none;
     border-radius: 50px;
+    margin-top: 80px;
+    margin-left: -25px;
 }
 .monthMainLink:hover > .monthMainBtn{
     text-decoration: underline;
@@ -245,8 +274,7 @@ body{
     margin-top: 60px;
     margin-bottom: 100px;
     background-repeat: no-repeat;
-    background-size:contain;
-    background-position: left;
+    background-size: cover;
     background-image: url(/img/Cover-Bogklub.jpg);
 }
 .signupLink{
@@ -271,7 +299,7 @@ body{
 .footer{
     flex-direction: row;
     display: flex;
-    justify-content: space-around;
+    position: relative;
     width: 100%;
     height: 300px;
     background-color: #FEFDF9;
@@ -279,32 +307,53 @@ body{
 .footerH1Group{
     display: flex;
     margin: auto 0;
+    margin-bottom: -8px;
 }
 .footerH1{
     color: #FE7D4E;
+}
+.footerH2{
+    margin-bottom: -10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
 }
 .footerSvg{
     cursor: pointer;
     fill: #FE7D4E;
     width: 50px;
+    margin-top: 15px;
 }
 .footerP, .footerH2{
     color: #543D32;
+}
+.footerP{
     font-weight: 500;
+    margin-bottom: -13px;
 }
 .footerImg{
     height: 100%;
+   position: absolute;
+   right: 0;
 }
 .footerTextSection{
     font-size: 12px;
     display: flex; 
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.footerTextSection2{
+    margin-top: 25px;
+}
+.footerText5{
+    margin-top: 30px;
 }
 
 
 
+
+/* ------Animations------ */
 @keyframes linksAnimation{
     from{
         opacity: 0;
@@ -321,49 +370,103 @@ body{
         opacity: 0;
     }
 }
-@media screen and (max-width: 1240px){
-    .footerImg{display: none;}
-    .footer{justify-content: center;}
 
-}
-@media screen and (max-width: 700px){
-    .monthBookMain{flex-direction: column;}
-    .signup{margin-top: 600px;}
-    
-}
-@media screen and (min-width: 701px) and (max-width: 1070px){
-    .signup{margin-top: 350px;}
+
+
+@media screen and (max-width: 1240px){
+    .footerImg{
+        display: none;
+    }
+    .footerTextSection{
+        margin: auto;
+    }
+    .footer{
+        justify-content: center;
+    }
+   
 }
 @media screen and (max-width: 800px){
-    body{width: 100%;}
-    .secondHandImgGroup{flex-wrap: wrap;}
-    .secondHandImgGroup{justify-content: space-between;}
-    .monthMainImg{height:300px; width: auto;}
-    .monthMainH1{font-size: 25px;}
-    .monthMainH2{font-size: 20px;}
-    .monthMainBtn{margin-top: -20px;}
+    .monthBookMain{
+        flex-direction: column;
+    }
+    .monthMainImg{
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 700px){
     
+    .signup{
+        margin-top: 850px;
+    }
+    .footer{
+        margin-top: 150px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1280px){
+    .signup{
+        margin-top: 600px;
+    }
+    .footer{
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width: 800px){
+    .secondHandImgGroup{
+        flex-wrap: wrap;
+    }
+    .secondHandImgGroup{
+        justify-content: space-between;
+    }
+    .monthMainImg{
+        height:300px; width: auto;
+    }
+    .monthMainH1{
+        font-size: 25px;
+    }
+    .monthMainH2{
+        font-size: 20px;
+    }
+    .monthMainBtn{
+        margin-top: -20px;
+    }
+    .navButton{
+        width: 14ch
+    }
 }
 @media screen and (max-width: 900px){
-    .secondHandBook{max-width: 120px;}
+    .secondHandBook{
+        max-width: 120px;
+    }
 }
-@media screen and (max-width: 1100px){
-    .signup{margin-bottom: -50px;}
+@media screen and (max-width: 1120px){
+    .signup{
+        margin-bottom: -50px;
+    }
 
 }
-@media screen and (max-width: 1070px){
+@media screen and (max-width: 1279px){
     .signupBtn{
         height: 30px;
         width: 140px;
         font-size: 10px;
     }
-    .monthBook{height: 300px; width: 100%; flex-direction: column;}
+    .monthBook{
+        height: 300px; 
+        width: 100%; 
+        flex-direction: column;
+    }
+    .monthBookMain{
+        width: 100%;
+    }
+    .monthMainImg{
+        height: 85%;
+    }
     .monthBookAside{
-        height: 300px;
+        height: 340px;
          width: 100%; 
          justify-content: space-between; 
-         margin-bottom: 30px; 
-         padding-bottom: 15px;}
+         padding-bottom: 30px;
+    }
 }
 @media screen and (max-width: 900px) and (min-width: 801px){
     .secondHand{
@@ -387,9 +490,51 @@ body{
    .hamburgerMenu{
        display: block;
     }
+    .navButton{
+        width: 90%;
+    }
 }
 @media screen and (min-width: 760px) and (max-width: 1180px){
-    .secondHand{height: 350px;}
+    .secondHand{
+        height: 350px;
+    }
 
 }
-
+@media screen and (max-width: 1280px) and (min-width: 1200px){
+    .monthMainImg{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 1220px){
+    .signup{
+    background-position: 95%;
+    }
+}
+@media screen and (max-width: 801px) and (min-width: 700px){
+    .signup{
+        margin-top: 880px;
+    }
+} 
+@media screen and (max-width: 376px){
+    .monthMainP, .monthMainH1, .monthMainH2, .monthMainDesc{
+        margin-left: 60px;
+    }
+    .monthMainBtn{
+        margin-left: 40px;
+    }
+    .monthMainH1{
+        font-size: 20px;
+    }
+    .monthMainH2{
+        font-size: 15px;
+    }
+    .monthMainDesc{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .signup{
+        background-size: contain;
+        margin-top: 700px;
+        margin-bottom: -250px;
+    }
+}
