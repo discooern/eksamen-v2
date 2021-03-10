@@ -21,6 +21,7 @@ header{
 main{
     position: relative;
 }
+
 a{
 text-decoration: none;
 transition: text-decoration, .5s;
@@ -41,20 +42,20 @@ a:hover{
     top: 0;
 
 }
-.headerTop10{
-    margin-left: 20px;
-}
-.headerH1, .headerTop10{
-    color: #FE7D4E;
-}
-.headerH1{
-    margin-right: -5px;
-}
 .headerGroup{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90px;
+}
+.headerH1{
+    margin-right: -5px;
+}
+.headerTop10{
+    margin-left: 20px;
+}
+.headerH1, .headerTop10{
+    color: #FE7D4E;
 }
 .returnBtn{
     position: absolute;
@@ -116,6 +117,17 @@ a:hover{
     width: 100%;
 
 }
+.section1, .section2{
+    width: 100%;
+    border-top: 40px solid  #ffdfce;
+    border-bottom: 40px solid #ffdfce;
+    padding: 20px;
+    background-color: #fde5d8;
+    display: flex;
+}
+.section2{
+    flex-direction: row-reverse;
+}
 .sectionTextGroup{
     display: flex;
     flex-direction: column;
@@ -129,17 +141,6 @@ a:hover{
 .sectionP{
     max-width: 1000px;
     color: #707070;
-}
-.section1, .section2{
-    width: 100%;
-    border-top: 40px solid  #ffdfce;
-    border-bottom: 40px solid #ffdfce;
-    padding: 20px;
-    background-color: #fde5d8;
-    display: flex;
-}
-.section2{
-    flex-direction: row-reverse;
 }
 .sectionImg{
     border-radius: 5000px;
@@ -166,13 +167,7 @@ footer{
 
 
 
-@media screen and (max-width: 880px) {
-    .top10Info{
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 80px;
-    }
-}
+/* ------Media Queries------ */
 @media screen and (max-width: 1400px){
     .section1, .section2{
         align-items: center;
@@ -186,5 +181,12 @@ footer{
     .sectionP{
     padding-right: 30px;
     padding-left: 5px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .top10Info{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
     }
 }

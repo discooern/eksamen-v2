@@ -34,43 +34,15 @@ a:hover, a > button:hover{
     text-decoration: underline;
  transition: text-decoration, .5s;   
 }
-a > button{
+a > button, .hamburgerMenu{
     cursor: pointer;
 }
-
 
 
 
 /* ------Header styling------ */
 
 /* Navigation styling */
-.navH1, .navButton{
-    color: #FE7D4E;
-}
-.navHeader > h1{
-    margin: auto 0;
-}
-.navHeader{
-    display: flex;
-    margin: auto 0;
-}
-.navLink{
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-}
-.navLink, .navButtonLink{
-    margin: 0;
-    margin-left: 20px;
-}
-.navButton{
-    border-radius: 30px;
-    border: none;
-    background-color: #FFECE5;
-    height: 6ch;
-    width: 18ch;
-}
-
 .navigationBar{
     transform: translateY(40px); transition: transform 0.5s ease 0s; top: -40px; position: fixed;
     background-color: #FFF7F3;
@@ -80,9 +52,35 @@ a > button{
     justify-content: space-around;
     z-index: 2;
 }
+.navHeader{
+    display: flex;
+    margin: auto 0;
+}
 .links{
     margin: auto 0;
     z-index: 3;
+}
+.navLink{
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+.navButton{
+    border-radius: 30px;
+    border: none;
+    background-color: #FFECE5;
+    height: 6ch;
+    width: 18ch;
+}
+.navHeader > h1{
+    margin: auto 0;
+}
+.navLink, .navButtonLink{
+    margin: 0;
+    margin-left: 20px;
+}
+.navH1, .navButton{
+    color: #FE7D4E;
 }
 .hamburgerMenu{
     display: none;
@@ -124,9 +122,6 @@ a > button{
 /* ------Main styling------ */
 
 /* SecondHand styling */
-.secondHandH1{
-    font-size: 1rem;
-}
 .secondHand{
     width: 80%;
     display: flex;
@@ -135,6 +130,17 @@ a > button{
     padding: 40px;
     margin: auto;
     margin-bottom: 50px;
+}
+.secondHandText{
+    display: flex;
+    justify-content: space-between; 
+}
+.secondHandImgGroup{
+    display: flex;
+    justify-content: space-between;
+}
+.secondHandH1{
+    font-size: 1rem;
 }
 .showMoreLink{
     text-decoration: none;
@@ -146,14 +152,7 @@ a > button{
 .showMoreImg{
     width: 24px;
 }
-.secondHandText{
-    display: flex;
-    justify-content: space-between; 
-}
-.secondHandImgGroup{
-    display: flex;
-    justify-content: space-between;
-}
+
 /* secondHand book styling */
 .secondHandBook{
     margin: 10px;
@@ -183,8 +182,16 @@ a > button{
     align-items: center;
     height: 600px;
 }
-.asideH1, .asideLink{
-    color: #543D32;
+.asideP{
+    color: #707070;
+    width: 200px;
+}
+.asideH1{
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+.asideImg{
+    width: 24px;
 }
 .asideLink{
     display: flex;
@@ -193,25 +200,28 @@ a > button{
     font-weight: 700;
     margin-top: 35px;
 }
-.asideImg{
-    width: 24px;
-}
-.asideH1{
-    font-size: 30px;
-    margin-bottom: 28px;
-}
-.asideP{
-    color: #707070;
-    width: 200px;
+.asideH1, .asideLink{
+    color: #543D32;
 }
 
 /* Book of the month MAIN Styling */
+.monthBookMain{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #fff2ee;
+    width: 70%;
+}
 .monthBookH1{
     color: #543D32;
 }
-.monthMainImg{
-    max-width: 272px;
-    margin-left: 13%;
+.monthBookH2{
+    font-size: 20px;
+}
+.monthMainText{
+    width: 500px;
+    margin-bottom: 25px;
+    margin-left: 10%;
 }
 .monthMainH1{
     color: #74432e;
@@ -228,33 +238,10 @@ a > button{
     font-weight: 600;
     margin-bottom: -10px;
 }
-.monthBookMain{
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    background-color: #fff2ee;
-    width: 70%;
-}
-.monthMainAlign{
-    width: 320px;
-    display: flex;
-    justify-content: space-between;
-}
-.monthBookH2{
-    font-size: 20px;
-}
 .monthMainDesc{
     color: #707070;
     max-width: 400px;
     margin-top: 20px;
-}
-.monthMainText, .monthMainLink{
-    margin-left: 20px;
-}
-.monthMainText{
-    width: 500px;
-    margin-bottom: 25px;
-    margin-left: 10%;
 }
 .monthMainBtn{
     background-color: #FE7D4E;
@@ -267,7 +254,18 @@ a > button{
     margin-top: 80px;
     margin-left: -25px;
 }
-
+.monthMainImg{
+    max-width: 272px;
+    margin-left: 13%;
+}
+.monthMainAlign{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+.monthMainText, .monthMainLink{
+    margin-left: 20px;
+}
 
 
 /* ------Signup Styling------ */
@@ -307,6 +305,16 @@ a > button{
     height: 300px;
     background-color: #FEFDF9;
 }
+.footerTextSection{
+    font-size: 12px;
+    display: flex; 
+    flex-direction: column;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.footerTextSection2{
+    margin-top: 25px;
+}
 .footerH1Group{
     display: flex;
     margin: auto 0;
@@ -338,16 +346,6 @@ a > button{
    position: absolute;
    right: 0;
 }
-.footerTextSection{
-    font-size: 12px;
-    display: flex; 
-    flex-direction: column;
-    margin-left: 200px;
-    margin-top: 50px;
-}
-.footerTextSection2{
-    margin-top: 25px;
-}
 .footerText5{
     margin-top: 30px;
 }
@@ -375,76 +373,19 @@ a > button{
 
 
 
-@media screen and (max-width: 1240px){
-    .footerImg{
-        display: none;
-    }
-    .footerTextSection{
-        margin: auto;
-    }
-    .footer{
-        justify-content: center;
-    }
-   
-}
-@media screen and (max-width: 800px){
-    .monthBookMain{
-        flex-direction: column;
-    }
+/* ------Media Queries------ */
+@media screen and (max-width: 1280px) and (min-width: 1200px){
     .monthMainImg{
-        margin: 0 auto;
+        margin-left: 10%;
     }
 }
-@media screen and (max-width: 700px){
-    
-    .signup{
-        margin-top: 850px;
-    }
-    .footer{
-        margin-top: 150px;
-    }
-}
-@media screen and (min-width: 701px) and (max-width: 1280px){
+@media screen and (max-width: 1280px) and (min-width: 701px){
     .signup{
         margin-top: 600px;
     }
     .footer{
         margin-top: 150px;
     }
-}
-@media screen and (max-width: 800px){
-    .secondHandImgGroup{
-        flex-wrap: wrap;
-    }
-    .secondHandImgGroup{
-        justify-content: space-between;
-    }
-    .monthMainImg{
-        height:300px; width: auto;
-    }
-    .monthMainH1{
-        font-size: 25px;
-    }
-    .monthMainH2{
-        font-size: 20px;
-    }
-    .monthMainBtn{
-        margin-top: -20px;
-    }
-    .navButton{
-        width: 14ch
-    }
-}
-@media screen and (max-width: 900px){
-    .secondHandBook{
-        max-width: 120px;
-    }
-}
-@media screen and (max-width: 1120px){
-    .signup{
-        margin-bottom: -50px;
-    }
-
 }
 @media screen and (max-width: 1279px){
     .signupBtn{
@@ -470,6 +411,40 @@ a > button{
          padding-bottom: 30px;
     }
 }
+@media screen and (max-width: 1240px){
+    .footerImg{
+        display: none;
+    }
+    .footerTextSection{
+        margin: auto;
+    }
+    .footer{
+        justify-content: center;
+    }
+   
+}
+@media screen and (max-width: 1220px){
+    .signup{
+    background-position: 95%;
+    }
+}
+@media screen and (max-width: 1180px) and (min-width: 760px) {
+    .secondHand{
+        height: 350px;
+    }
+
+}
+@media screen and (max-width: 1120px){
+    .signup{
+        margin-bottom: -50px;
+    }
+
+}
+@media screen and (max-width: 900px){
+    .secondHandBook{
+        max-width: 120px;
+    }
+}
 @media screen and (max-width: 900px) and (min-width: 801px){
     .secondHand{
         margin-top: 40px;
@@ -477,49 +452,71 @@ a > button{
 
 }
 @media screen and (max-width: 890px){
-   .links{
-       opacity: 0;
-       position: absolute;
-       top: 80px;
-       border-radius: 50px;
-        animation-name: linksAnimation;
-        animation-duration: .8s;
-        animation-fill-mode: forwards;
-    }
     .links{
-        background-color: #FEFDF9;
-    }
-   .hamburgerMenu{
-       display: block;
-    }
-    .navigationBar{
-        border: rgba(0, 0, 0, 0.3);
-    }
-    .navButton{
-        width: 90%;
-    }
-}
-@media screen and (min-width: 760px) and (max-width: 1180px){
-    .secondHand{
-        height: 350px;
-    }
-
-}
-@media screen and (max-width: 1280px) and (min-width: 1200px){
-    .monthMainImg{
-        margin-left: 10%;
-    }
-}
-@media screen and (max-width: 1220px){
-    .signup{
-    background-position: 95%;
-    }
+        opacity: 0;
+        position: absolute;
+        top: 80px;
+        border-radius: 50px;
+         animation-name: linksAnimation;
+         animation-duration: .8s;
+         animation-fill-mode: forwards;
+     }
+     .links{
+         background-color: #FEFDF9;
+     }
+    .hamburgerMenu{
+        display: block;
+     }
+     .navigationBar{
+         border: rgba(0, 0, 0, 0.3);
+     }
+     .navButton{
+         width: 90%;
+     }
 }
 @media screen and (max-width: 801px) and (min-width: 700px){
     .signup{
         margin-top: 880px;
     }
 } 
+@media screen and (max-width: 800px){
+    .monthBookMain{
+        flex-direction: column;
+    }
+    .monthMainImg{
+        margin: 0 auto;
+    }
+    .secondHandImgGroup{
+        flex-wrap: wrap;
+    }
+    .secondHandImgGroup{
+        justify-content: space-between;
+    }
+    .monthMainImg{
+        height:300px; width: auto;
+    }
+    .monthMainH1{
+        font-size: 25px;
+    }
+    .monthMainH2{
+        font-size: 20px;
+    }
+    .monthMainBtn{
+        margin-top: -20px;
+    }
+    .navButton{
+        width: 14ch
+    }
+}
+@media screen and (max-width: 700px){
+    
+    .signup{
+        margin-top: 850px;
+    }
+    .footer{
+        margin-top: 150px;
+    }
+}
 @media screen and (max-width: 376px){
     .monthMainP, .monthMainH1, .monthMainH2, .monthMainDesc{
         margin-left: 60px;
